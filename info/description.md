@@ -1,3 +1,4 @@
+We'll begin by storing dictionaries in their on board memory. 
 Dictionaries are a convenient data type to store and process configurations.
 They allow you to store data by keys to create nested structures.
 You are given a dictionary where the keys are strings and the values are strings or dictionaries.
@@ -34,6 +35,6 @@ The result will be:
  "additional/place/cell": "2"}
 ```
 
-We've already written the code for this task, but it has a bug.
+Our master server has already written the code for this task, but it has a bug in it.
 
 **You need to find and fix this bug.**

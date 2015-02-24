@@ -1,6 +1,6 @@
-A sniper should be attentive. And smart.
-So we will code training method.
+Due to the high demands placed on our snipers, we need to develop a rigerous training program to ensure that they are as smart and attentive as they can possibly be before deploying them to the field.
 
+We'll begin by storing dictionaries in their on board memory. 
 Dictionaries are a convenient data type to store and process configurations.
 They allow you to store data by keys to create nested structures.
 You are given a dictionary where the keys are strings and the values are strings or dictionaries.
@@ -37,7 +37,7 @@ The result will be:
  "additional/place/cell": "2"}
 ```
 
-We've already written the code for this task, but it has a bug.
+Our master server has already written the code for this task, but it has a bug in it.
 
 **You need to find and fix this bug.**
 
@@ -54,10 +54,9 @@ flatten({"empty": {}}) == {"empty": ""}
 ```
 **How it is used:**
 
-This concept can be useful if you need to parse config files and simplify structures
-for grandfathered systems and file structures.
+This concept can be useful if you need to parse config files and simplify structures for grandfathered systems and file structures.
 You can easily modify this idea for your own specifications.
-Besides that, it's a  useful skill to be able to read code and search for bugs.
+Besides that, the ability to read code and search for bugs is incredibly useful in the real world.
 
 
 **Precondition:**

@@ -38,5 +38,5 @@ api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
-        function_name="flatten"
+        DEFAULT_FUNCTION_NAME="flatten"
     ).on_ready)

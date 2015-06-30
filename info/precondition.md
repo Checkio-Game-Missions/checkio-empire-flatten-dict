@@ -4,4 +4,4 @@
 
 **Values** in a dictionary are strings or dicts.
 
-`root_dictionary != {}`
+`root_dictionary ≠ {}`

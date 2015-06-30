@@ -1,0 +1,55 @@
+function flatten(dictionary) {
+    var stack = [[[], dictionary]];
+    var result = {};
+    while (stack.length > 0) {
+        var current = stack.pop();
+        var path = current[0];
+        var node = current[1];
+        for (var k in node) {
+            if (!node.hasOwnProperty(k)) continue;
+            var v = node[k];
+            var pathCopy = path.slice();
+            pathCopy.push(k);
+            if (typeof(v) === 'object') {
+                stack.push([pathCopy, v]);
+            }
+            else {
+                result[pathCopy.join("/")] = v;
+            }
+        }
+    }
+    return result;
+}
+
+var assert = require("assert");
+
+if (!global.is_checking) {
+    // These "asserts" using only for self-checking and not necessary for auto-testing
+    assert.deepEqual(flatten({"key": "value"}), {"key": "value"}, "Simple");
+    assert.deepEqual(flatten(
+            {"key": {"deeper": {"more": {"enough": "value"}}}}),
+        {"key/deeper/more/enough": "value"}, "Nested");
+    assert.deepEqual(flatten({"empty": {}}), {"empty": ""}, "Empty value");
+    assert.deepEqual(flatten({
+            "name": {
+                "first": "One",
+                "last": "Drone"
+            },
+            "job": "scout",
+            "recent": {},
+            "additional": {
+                "place": {
+                    "zone": "1",
+                    "cell": "2"
+                }
+            }
+        }),
+        {
+            "name/first": "One",
+            "name/last": "Drone",
+            "job": "scout",
+            "recent": "",
+            "additional/place/zone": "1",
+            "additional/place/cell": "2"
+        }, "Not Simple");
+}

@@ -1,3 +1,5 @@
+"use strict";
+
 function flatten(dictionary) {
     var stack = [[[], dictionary]];
     var result = {};
@@ -52,4 +54,5 @@ if (!global.is_checking) {
             "additional/place/zone": "1",
             "additional/place/cell": "2"
         }, "Not Simple");
+    console.log("Earn cool rewards by using the 'Check' button!");
 }

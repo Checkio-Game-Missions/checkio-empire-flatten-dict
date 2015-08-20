@@ -34,3 +34,4 @@ if __name__ == '__main__':
           "recent": "",
           "additional/place/zone": "1",
           "additional/place/cell": "2"}, "Not Simple"
+    print("All done? Earn rewards by using the 'Check' button!")
